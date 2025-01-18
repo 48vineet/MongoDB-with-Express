@@ -73,9 +73,17 @@ app.put("/chats/:id", async (req, res) => {
   let { id } = req.params;
   let { msg: newMsg } = req.body;
   let updatedChat = await Chat.findByIdAndUpdate(id, { msg: newMsg }, { runValidators: true, new: true });
-  // console.log(updatedChat);
   res.redirect("/chats");
-})
+});
+
+//Destroy Route 
+
+app.delete("/chats/:id", async (req, res) => {
+  let { id } = req.params;
+  let deletedChat = await Chat.findByIdAndDelete(id);
+  console.log(deletedChat);
+  res.redirect("/chats");
+});
 
 app.listen(port, () => console.log(`app listening on port ${3000}!`));
 
