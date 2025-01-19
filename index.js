@@ -17,7 +17,7 @@ main()
   .then(() => {
     console.log("connection Successful");
   })
-  .catch((err) => {
+  .catch((err) => { 
     console.log(err);
   });
 
