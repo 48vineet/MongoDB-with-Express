@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const chatSchema = new mongoose.Schema({
     from: {
         type: String,
-        required: true
+        required: true 
     }, 
     to: {
         type: String,
