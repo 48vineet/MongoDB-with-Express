@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chat.js");
 const methodOverride = require("method-override");
-const app = express();
+const app = express(); 
 const port = 3000;  
  
 app.set("views", path.join(__dirname, "views"));
